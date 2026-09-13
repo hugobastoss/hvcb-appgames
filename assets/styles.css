@@ -47,16 +47,8 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-rad
   display: flex; align-items: center; justify-content: space-between;
   flex-wrap: wrap; gap: 1rem; padding-block: 1.5rem;
 }
-.marca {
-  display: flex; align-items: center; gap: 0.6rem;
-  font-family: var(--display); font-weight: 700; font-size: 1.05rem;
-  letter-spacing: -0.01em; text-decoration: none;
-}
-.marca-simbolo {
-  width: 2rem; height: 2rem; border-radius: 0.6rem;
-  display: grid; place-items: center;
-  background: var(--ink); color: var(--paper); font-size: 0.9rem;
-}
+.marca { display: block; text-decoration: none; }
+.marca img { height: 3.5rem; width: auto; }
 .idiomas { display: flex; gap: 0.4rem; }
 .idiomas a {
   font-size: 0.75rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase;

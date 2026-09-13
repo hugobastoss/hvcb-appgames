@@ -10,7 +10,7 @@ Site de portfólio dos apps e projetos da HVCB App&Games.
 |---|---|---|
 | Me Paga | Android | Na Google Play |
 | Meu Pix | Android | Na Google Play |
-| Minhas Compras | Android | Em teste fechado |
+| Minhas Compras | Android | Na Google Play |
 | Deckslingo | Web | No ar (deckslingo.com) |
 
 ## Estrutura
@@ -21,8 +21,12 @@ index-en.html     # English
 index-es.html     # Español
 favicon.svg
 assets/
-  styles.css      # estilo compartilhado pelas três páginas
-  icons/          # ícones dos apps, 256×256 PNG
+  styles.css                    # estilo compartilhado pelas três páginas
+  logo-horizontal-grafite.webp  # logo do topo no tema claro
+  logo-horizontal-branco.webp   # logo do topo no tema escuro
+  banner-largo-*.webp           # banner branco/grafite (ainda não usado)
+  icons/                        # ícones dos apps, 256×256 PNG
+originais/                      # PNGs de origem da logo e do banner (fora do git)
 ```
 
 HTML e CSS estáticos, sem build. Publicado pelo GitHub Pages a partir da
@@ -36,9 +40,9 @@ branch `main` (raiz).
 3. Crie a cor do app em `assets/styles.css` (`.app--<app>`, com versão para
    o modo escuro).
 
-Para mudar o status de um app (ex.: Minhas Compras sair do teste fechado),
-troque `status--breve` por `status` e o `<span class="botao botao--off">`
-por um link `<a class="botao" href="...">`.
+Para um app que ainda não está na loja, use `status--breve` no status e
+`<span class="botao botao--off">` no botão. Quando ele for publicado, troque
+por `status` e por um link `<a class="botao" href="...">`.
 
 ## Rodar localmente
 

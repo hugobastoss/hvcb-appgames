@@ -24,7 +24,12 @@
 <body>
 <div class="container">
   <header class="topo">
-    <a class="marca" href="index-es.html"><span class="marca-simbolo" aria-hidden="true">H</span>HVCB App&amp;Games</a>
+    <a class="marca" href="index-es.html">
+      <picture>
+        <source srcset="assets/logo-horizontal-branco.webp" media="(prefers-color-scheme: dark)">
+        <img src="assets/logo-horizontal-grafite.webp" alt="HVCB App&amp;Games" width="1353" height="753">
+      </picture>
+    </a>
     <nav class="idiomas" aria-label="Idioma">
       <a href="index.html" hreflang="pt-BR">PT</a>
       <a href="index-en.html" hreflang="en">EN</a>
@@ -104,7 +109,7 @@
             <img class="app-icone" src="assets/icons/minhascompras.png" alt="" width="72" height="72" loading="lazy">
             <div class="app-nome">
               <h3>Minhas Compras</h3>
-              <p class="app-meta"><span class="status status--breve">En prueba cerrada</span><span>Android</span></p>
+              <p class="app-meta"><span class="status">En Google Play</span><span>Android</span></p>
             </div>
           </div>
           <p>Lista de compras 100% sin conexión: arma y revisa tus listas en el súper sin necesitar internet.</p>
@@ -114,7 +119,7 @@
             <li>Papelera para recuperar listas y copia de seguridad</li>
           </ul>
           <div class="app-acoes">
-            <span class="botao botao--off">Próximamente en Google Play</span>
+            <a class="botao" href="https://play.google.com/store/apps/details?id=com.hvcb.appgames.minhascompras">Descargar en Google Play</a>
             <span class="links-legais">
               <a class="link" href="https://hugobastoss.github.io/app-minhas-compras-docs/politica-de-privacidade-es.html">Privacidad</a>
               <a class="link" href="https://hugobastoss.github.io/app-minhas-compras-docs/termos-de-uso-es.html">Términos</a>
