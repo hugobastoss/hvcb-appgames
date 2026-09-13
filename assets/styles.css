@@ -156,6 +156,37 @@ h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; li
   .app--deckslingo    { --accent: #9A94F7; --accent-soft: #25234A; --on-accent: #12112A; }
 }
 
+/* Sobre */
+.sobre {
+  --accent: var(--ink);
+  display: grid; gap: clamp(1.5rem, 4vw, 3rem); align-items: start;
+  grid-template-columns: minmax(0, 1fr);
+}
+.sobre-foto {
+  width: 9rem; height: auto; aspect-ratio: 1; object-fit: cover;
+  border-radius: 50%; border: 1px solid var(--line); background: var(--soft);
+}
+.sobre-nome { font-family: var(--display); font-weight: 700; font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.2; }
+.sobre-papel { color: var(--muted); margin-top: 0.2rem; }
+.sobre-texto { display: grid; gap: 0.9rem; margin-top: 1.1rem; max-width: 42rem; }
+.sobre h3 {
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin: 1.75rem 0 0.75rem;
+}
+.tecnologias { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tecnologias li {
+  font-size: 0.85rem; background: var(--card);
+  padding: 0.3rem 0.85rem; border: 1px solid var(--line); border-radius: 999px;
+}
+.sobre-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.75rem; }
+.botao--contorno { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.botao--contorno:hover { border-color: var(--ink); opacity: 1; }
+
+@media (min-width: 48rem) {
+  .sobre { grid-template-columns: 13rem minmax(0, 1fr); }
+  .sobre-foto { width: 13rem; }
+}
+
 /* Contato */
 .contato {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem;
