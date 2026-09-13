@@ -26,6 +26,7 @@ assets/
   logo-horizontal-branco.webp   # logo do topo no tema escuro
   banner-largo-*.webp           # banner branco/grafite (ainda não usado)
   hugo-bastos.webp              # foto da seção Sobre
+  tecnologias.svg               # ícones das tecnologias (sprite, usado com <use>)
   icons/                        # ícones dos apps, 256×256 PNG
 originais/                      # PNGs de origem da logo e do banner (fora do git)
 ```

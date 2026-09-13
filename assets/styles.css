@@ -175,9 +175,11 @@ h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; li
 }
 .tecnologias { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .tecnologias li {
+  display: inline-flex; align-items: center; gap: 0.45rem;
   font-size: 0.85rem; background: var(--card);
-  padding: 0.3rem 0.85rem; border: 1px solid var(--line); border-radius: 999px;
+  padding: 0.3rem 0.85rem 0.3rem 0.7rem; border: 1px solid var(--line); border-radius: 999px;
 }
+.tecnologias svg { width: 1rem; height: 1rem; flex-shrink: 0; fill: currentColor; }
 .sobre-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.75rem; }
 .botao--contorno { background: transparent; color: var(--ink); border: 1px solid var(--line); }
 .botao--contorno:hover { border-color: var(--ink); opacity: 1; }
