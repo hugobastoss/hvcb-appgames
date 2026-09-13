@@ -42,6 +42,9 @@ branch `main` (raiz).
 3. Crie a cor do app em `assets/styles.css` (`.app--<app>`, com versão para
    o modo escuro).
 
+Projetos em desenvolvimento vão na seção Outros projetos (`id="projetos"`),
+com o mesmo formato de card e o status `status--breve`.
+
 Para um app que ainda não está na loja, use `status--breve` no status e
 `<span class="botao botao--off">` no botão. Quando ele for publicado, troque
 por `status` e por um link `<a class="botao" href="...">`.

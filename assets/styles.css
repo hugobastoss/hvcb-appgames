@@ -83,12 +83,15 @@ h1 {
 .secao { padding-bottom: 4rem; }
 .secao-titulo { padding-top: 1.75rem; margin-bottom: 1.5rem; border-top: 1px solid var(--line); }
 h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; line-height: 1.2; }
+.secao-titulo p { color: var(--muted); margin-top: 0.3rem; }
 
 /* Cards de app */
 .apps {
   display: grid; gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
 }
+/* auto-fill keeps a lone project card at the same width as the app cards */
+.apps--projetos { grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); }
 .app {
   --accent: var(--ink); --accent-soft: var(--soft); --on-accent: var(--paper);
   display: flex; flex-direction: column; gap: 1.1rem;
@@ -148,8 +151,10 @@ h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; li
 .app--meupix        { --accent: #1A7A70; --accent-soft: #D9EFEC; --on-accent: #FFFFFF; }
 .app--minhascompras { --accent: #A85618; --accent-soft: #F7E1C6; --on-accent: #FFFFFF; }
 .app--deckslingo    { --accent: #4F46E5; --accent-soft: #E4E2FB; --on-accent: #FFFFFF; }
+.app--devstackshub  { --accent: #0E7490; --accent-soft: #D5F3F9; --on-accent: #FFFFFF; }
 
 @media (prefers-color-scheme: dark) {
+  .app--devstackshub  { --accent: #22D3EE; --accent-soft: #10303A; --on-accent: #06222A; }
   .app--mepaga        { --accent: #5BC08A; --accent-soft: #1E3226; --on-accent: #0E1A13; }
   .app--meupix        { --accent: #5FD1C4; --accent-soft: #17302D; --on-accent: #0B1A18; }
   .app--minhascompras { --accent: #F0A25E; --accent-soft: #3A2A1C; --on-accent: #1E130A; }
