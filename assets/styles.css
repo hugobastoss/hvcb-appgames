@@ -152,9 +152,11 @@ h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; li
 .app--minhascompras { --accent: #A85618; --accent-soft: #F7E1C6; --on-accent: #FFFFFF; }
 .app--deckslingo    { --accent: #4F46E5; --accent-soft: #E4E2FB; --on-accent: #FFFFFF; }
 .app--devstackshub  { --accent: #0E7490; --accent-soft: #D5F3F9; --on-accent: #FFFFFF; }
+.app--devskillshub  { --accent: #047857; --accent-soft: #D1FAE5; --on-accent: #FFFFFF; }
 
 @media (prefers-color-scheme: dark) {
   .app--devstackshub  { --accent: #22D3EE; --accent-soft: #10303A; --on-accent: #06222A; }
+  .app--devskillshub  { --accent: #34D399; --accent-soft: #0F2E24; --on-accent: #052E1F; }
   .app--mepaga        { --accent: #5BC08A; --accent-soft: #1E3226; --on-accent: #0E1A13; }
   .app--meupix        { --accent: #5FD1C4; --accent-soft: #17302D; --on-accent: #0B1A18; }
   .app--minhascompras { --accent: #F0A25E; --accent-soft: #3A2A1C; --on-accent: #1E130A; }
