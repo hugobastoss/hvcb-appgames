@@ -158,7 +158,6 @@ h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; li
 
 /* Sobre */
 .sobre {
-  --accent: var(--ink);
   display: grid; gap: clamp(1.5rem, 4vw, 3rem); align-items: start;
   grid-template-columns: minmax(0, 1fr);
 }
