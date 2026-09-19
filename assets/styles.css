@@ -81,6 +81,7 @@ h1 {
 
 /* Seções */
 .secao { padding-bottom: 4rem; }
+.secao--junto { padding-bottom: 1rem; }
 .secao-titulo { padding-top: 1.75rem; margin-bottom: 1.5rem; border-top: 1px solid var(--line); }
 h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; line-height: 1.2; }
 .secao-titulo p { color: var(--muted); margin-top: 0.3rem; }
