@@ -43,7 +43,9 @@ branch `main` (raiz).
    o modo escuro).
 
 Projetos em desenvolvimento vão na seção Outros projetos (`id="projetos"`),
-com o mesmo formato de card e o status `status--breve`.
+com o mesmo formato de card e o status `status--breve`. Ferramentas para
+desenvolvedores (diretórios, curadorias) vão na seção Para desenvolvedores
+(`id="desenvolvedores"`), no mesmo formato.
 
 Para um app que ainda não está na loja, use `status--breve` no status e
 `<span class="botao botao--off">` no botão. Quando ele for publicado, troque
