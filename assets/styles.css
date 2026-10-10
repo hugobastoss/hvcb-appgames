@@ -158,12 +158,14 @@ h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; li
 .app--qbuscado      { --accent: #5B3DE0; --accent-soft: #E6E1FB; --on-accent: #FFFFFF; }
 .app--minhaescala   { --accent: #2563EB; --accent-soft: #DBE7FC; --on-accent: #FFFFFF; }
 .app--deviahub      { --accent: #C2410C; --accent-soft: #FDE6D1; --on-accent: #FFFFFF; }
+.app--widgetcode    { --accent: #0369A1; --accent-soft: #D6ECFB; --on-accent: #FFFFFF; }
 
 @media (prefers-color-scheme: dark) {
   .app--pagueme       { --accent: #F5C542; --accent-soft: #33290F; --on-accent: #1F1805; }
   .app--qbuscado      { --accent: #9B8AFA; --accent-soft: #241F3D; --on-accent: #130F26; }
   .app--minhaescala   { --accent: #60A5FA; --accent-soft: #15233D; --on-accent: #071224; }
   .app--deviahub      { --accent: #FB923C; --accent-soft: #3A2415; --on-accent: #241405; }
+  .app--widgetcode    { --accent: #38BDF8; --accent-soft: #0F2938; --on-accent: #04141F; }
   .app--devstackshub  { --accent: #22D3EE; --accent-soft: #10303A; --on-accent: #06222A; }
   .app--devskillshub  { --accent: #34D399; --accent-soft: #0F2E24; --on-accent: #052E1F; }
   .app--mepaga        { --accent: #5BC08A; --accent-soft: #1E3226; --on-accent: #0E1A13; }
