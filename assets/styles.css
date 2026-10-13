@@ -38,9 +38,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a { color: inherit; }
+a { color: inherit; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
 img { max-width: 100%; display: block; }
 a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 6px; }
+p { text-wrap: pretty; }
+
+.pular-conteudo {
+  position: absolute; top: -3rem; left: 1rem; z-index: 10;
+  background: var(--ink); color: var(--paper);
+  padding: 0.6rem 1.1rem; border-radius: 0.6rem;
+  text-decoration: none; font-weight: 600; font-size: 0.9rem;
+  transition: top 0.15s ease;
+}
+.pular-conteudo:focus-visible { top: 1rem; outline-offset: 2px; }
 
 .container { max-width: 68rem; margin: 0 auto; padding-inline: 1.25rem; }
 
@@ -86,7 +96,7 @@ h1 {
 .secao { padding-bottom: 4rem; }
 .secao--junto { padding-bottom: 1rem; }
 .secao-titulo { padding-top: 1.75rem; margin-bottom: 1.5rem; border-top: 1px solid var(--line); }
-h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; line-height: 1.2; }
+h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; line-height: 1.2; text-wrap: balance; }
 .secao-titulo p { color: var(--muted); margin-top: 0.3rem; }
 
 /* Cards de app */
@@ -98,16 +108,22 @@ h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; li
 .apps--projetos { grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); }
 .app {
   --accent: var(--ink); --accent-soft: var(--soft); --on-accent: var(--paper);
+  position: relative;
   display: flex; flex-direction: column; gap: 1.1rem;
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
   padding: clamp(1.25rem, 3vw, 1.75rem);
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.app::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  box-shadow: 0 16px 32px -20px var(--accent);
+  opacity: 0; transition: opacity 0.2s ease;
 }
 .app:hover {
   border-color: var(--accent);
   transform: translateY(-3px);
-  box-shadow: 0 16px 32px -20px var(--accent);
 }
+.app:hover::after { opacity: 1; }
 
 .app-topo { display: flex; align-items: center; gap: 1rem; }
 .app-icone {

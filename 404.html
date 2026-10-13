@@ -6,6 +6,8 @@
 <title>Página não encontrada — HVCB App&amp;Games</title>
 <meta name="robots" content="noindex">
 <meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F5F3EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101211" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,17 +19,18 @@
 </style>
 </head>
 <body>
+<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 <div class="container">
   <header class="topo">
     <a class="marca" href="index.html">
       <picture>
         <source srcset="assets/logo-horizontal-branco.webp" media="(prefers-color-scheme: dark)">
-        <img src="assets/logo-horizontal-grafite.webp" alt="HVCB App&amp;Games" width="1353" height="753">
+        <img src="assets/logo-horizontal-grafite.webp" alt="HVCB App&amp;Games" width="1353" height="753" fetchpriority="high">
       </picture>
     </a>
   </header>
 
-  <main>
+  <main id="conteudo" tabindex="-1">
     <section class="erro">
       <p class="erro-codigo" aria-hidden="true">404</p>
       <h1>Essa página não existe.</h1>
