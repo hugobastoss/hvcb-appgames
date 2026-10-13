@@ -15,6 +15,7 @@ Site de portfólio dos apps e projetos da HVCB App&Games.
 | PagueMe | Android | Em Testes |
 | Minha Escala | Android | Em Testes |
 | QBuscado | Web | Em desenvolvimento |
+| Meu Sorteio | Android | Em desenvolvimento |
 | DevStacksHub | Web | Em desenvolvimento |
 | DevSkillsHub | Web | Em desenvolvimento |
 | DevIAHub | Web | Em desenvolvimento |
