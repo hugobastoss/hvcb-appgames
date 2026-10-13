@@ -27,6 +27,8 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+html { scroll-behavior: smooth; }
+
 body {
   background: var(--paper);
   color: var(--ink);
@@ -54,6 +56,7 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-rad
   font-size: 0.75rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase;
   text-decoration: none; color: var(--muted);
   padding: 0.2rem 0.6rem; border: 1px solid var(--line); border-radius: 999px;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
 }
 .idiomas a:hover { color: var(--ink); border-color: var(--muted); }
 .idiomas a.ativo { background: var(--ink); border-color: var(--ink); color: var(--paper); }
@@ -98,9 +101,13 @@ h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; li
   display: flex; flex-direction: column; gap: 1.1rem;
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
   padding: clamp(1.25rem, 3vw, 1.75rem);
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
-.app:hover { border-color: var(--accent); }
+.app:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -20px var(--accent);
+}
 
 .app-topo { display: flex; align-items: center; gap: 1rem; }
 .app-icone {
@@ -137,16 +144,24 @@ h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; li
   font-size: 0.92rem; font-weight: 600; text-decoration: none; overflow-wrap: anywhere;
   padding: 0.65rem 1.15rem; border-radius: 999px;
   background: var(--accent); color: var(--on-accent);
-  transition: opacity 0.15s ease;
+  transition: opacity 0.15s ease, transform 0.1s ease;
 }
 .botao:hover { opacity: 0.88; }
+.botao:active { transform: scale(0.97); }
 .botao--off { background: var(--soft); color: var(--muted); }
 .links-legais { display: flex; gap: 1rem; }
 .link {
   font-size: 0.88rem; color: var(--muted);
   text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
 .link:hover { color: var(--ink); text-decoration-color: currentColor; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .app, .botao, .idiomas a, .link { transition: none; }
+  .app:hover { transform: none; }
+}
 
 .app--mepaga        { --accent: #1B4332; --accent-soft: #DDEEE2; --on-accent: #FFFFFF; }
 .app--meupix        { --accent: #1A7A70; --accent-soft: #D9EFEC; --on-accent: #FFFFFF; }

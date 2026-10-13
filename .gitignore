@@ -1,1 +1,8 @@
 originais/
+# Playwright CLI output (may contain credentials)
+.playwright-cli/
+# Local skill tooling caches, not part of the site
+.agents/
+.aider-desk/
+.claude/
+skills-lock.json
