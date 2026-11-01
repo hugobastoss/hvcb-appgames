@@ -10,10 +10,12 @@
   --radius: 20px;
   --display: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
 }
 
+/* Modo escuro: pelo sistema (se o usuário não escolheu manualmente)... */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --paper: #101211;
     --ink: #ECEAE4;
     --muted: #9CA19E;
@@ -22,7 +24,21 @@
     --soft: #222625;
     --ok: #5BC08A;
     --wait: #E0A552;
+    color-scheme: dark;
   }
+}
+
+/* ...ou escolhido manualmente pelo alternador de tema (assets/theme.js) */
+:root[data-theme="dark"] {
+  --paper: #101211;
+  --ink: #ECEAE4;
+  --muted: #9CA19E;
+  --line: #272B29;
+  --card: #181B1A;
+  --soft: #222625;
+  --ok: #5BC08A;
+  --wait: #E0A552;
+  color-scheme: dark;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -36,11 +52,12 @@ body {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 a { color: inherit; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
 img { max-width: 100%; display: block; }
-a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 6px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 6px; }
 p { text-wrap: pretty; }
 
 .pular-conteudo {
@@ -61,6 +78,7 @@ p { text-wrap: pretty; }
 }
 .marca { display: block; text-decoration: none; }
 .marca img { height: 3.5rem; width: auto; }
+.topo-acoes { display: flex; align-items: center; gap: 0.6rem; }
 .idiomas { display: flex; gap: 0.4rem; }
 .idiomas a {
   font-size: 0.75rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase;
@@ -70,6 +88,14 @@ p { text-wrap: pretty; }
 }
 .idiomas a:hover { color: var(--ink); border-color: var(--muted); }
 .idiomas a.ativo { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+
+.tema-botao {
+  font: inherit; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase;
+  color: var(--muted); background: transparent; cursor: pointer;
+  padding: 0.2rem 0.6rem; border: 1px solid var(--line); border-radius: 999px;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+.tema-botao:hover { color: var(--ink); border-color: var(--muted); }
 
 /* Hero */
 .hero { padding-block: 3.5rem 3rem; max-width: 46rem; }
@@ -112,7 +138,7 @@ h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; li
   display: flex; flex-direction: column; gap: 1.1rem;
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
   padding: clamp(1.25rem, 3vw, 1.75rem);
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
 }
 .app::after {
   content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
@@ -193,19 +219,32 @@ h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; li
 .app--meusorteio    { --accent: #A21CAF; --accent-soft: #F6DFF5; --on-accent: #FFFFFF; }
 
 @media (prefers-color-scheme: dark) {
-  .app--pagueme       { --accent: #F5C542; --accent-soft: #33290F; --on-accent: #1F1805; }
-  .app--qbuscado      { --accent: #9B8AFA; --accent-soft: #241F3D; --on-accent: #130F26; }
-  .app--minhaescala   { --accent: #60A5FA; --accent-soft: #15233D; --on-accent: #071224; }
-  .app--deviahub      { --accent: #FB923C; --accent-soft: #3A2415; --on-accent: #241405; }
-  .app--widgetcode    { --accent: #38BDF8; --accent-soft: #0F2938; --on-accent: #04141F; }
-  .app--meusorteio    { --accent: #E879F9; --accent-soft: #3A1638; --on-accent: #230D21; }
-  .app--devstackshub  { --accent: #22D3EE; --accent-soft: #10303A; --on-accent: #06222A; }
-  .app--devskillshub  { --accent: #34D399; --accent-soft: #0F2E24; --on-accent: #052E1F; }
-  .app--mepaga        { --accent: #5BC08A; --accent-soft: #1E3226; --on-accent: #0E1A13; }
-  .app--meupix        { --accent: #5FD1C4; --accent-soft: #17302D; --on-accent: #0B1A18; }
-  .app--minhascompras { --accent: #F0A25E; --accent-soft: #3A2A1C; --on-accent: #1E130A; }
-  .app--deckslingo    { --accent: #9A94F7; --accent-soft: #25234A; --on-accent: #12112A; }
+  :root:not([data-theme="light"]) .app--pagueme { --accent: #F5C542; --accent-soft: #33290F; --on-accent: #1F1805; }
+  :root:not([data-theme="light"]) .app--qbuscado { --accent: #9B8AFA; --accent-soft: #241F3D; --on-accent: #130F26; }
+  :root:not([data-theme="light"]) .app--minhaescala { --accent: #60A5FA; --accent-soft: #15233D; --on-accent: #071224; }
+  :root:not([data-theme="light"]) .app--deviahub { --accent: #FB923C; --accent-soft: #3A2415; --on-accent: #241405; }
+  :root:not([data-theme="light"]) .app--widgetcode { --accent: #38BDF8; --accent-soft: #0F2938; --on-accent: #04141F; }
+  :root:not([data-theme="light"]) .app--meusorteio { --accent: #E879F9; --accent-soft: #3A1638; --on-accent: #230D21; }
+  :root:not([data-theme="light"]) .app--devstackshub { --accent: #22D3EE; --accent-soft: #10303A; --on-accent: #06222A; }
+  :root:not([data-theme="light"]) .app--devskillshub { --accent: #34D399; --accent-soft: #0F2E24; --on-accent: #052E1F; }
+  :root:not([data-theme="light"]) .app--mepaga { --accent: #5BC08A; --accent-soft: #1E3226; --on-accent: #0E1A13; }
+  :root:not([data-theme="light"]) .app--meupix { --accent: #5FD1C4; --accent-soft: #17302D; --on-accent: #0B1A18; }
+  :root:not([data-theme="light"]) .app--minhascompras { --accent: #F0A25E; --accent-soft: #3A2A1C; --on-accent: #1E130A; }
+  :root:not([data-theme="light"]) .app--deckslingo { --accent: #9A94F7; --accent-soft: #25234A; --on-accent: #12112A; }
 }
+
+:root[data-theme="dark"] .app--pagueme { --accent: #F5C542; --accent-soft: #33290F; --on-accent: #1F1805; }
+:root[data-theme="dark"] .app--qbuscado { --accent: #9B8AFA; --accent-soft: #241F3D; --on-accent: #130F26; }
+:root[data-theme="dark"] .app--minhaescala { --accent: #60A5FA; --accent-soft: #15233D; --on-accent: #071224; }
+:root[data-theme="dark"] .app--deviahub { --accent: #FB923C; --accent-soft: #3A2415; --on-accent: #241405; }
+:root[data-theme="dark"] .app--widgetcode { --accent: #38BDF8; --accent-soft: #0F2938; --on-accent: #04141F; }
+:root[data-theme="dark"] .app--meusorteio { --accent: #E879F9; --accent-soft: #3A1638; --on-accent: #230D21; }
+:root[data-theme="dark"] .app--devstackshub { --accent: #22D3EE; --accent-soft: #10303A; --on-accent: #06222A; }
+:root[data-theme="dark"] .app--devskillshub { --accent: #34D399; --accent-soft: #0F2E24; --on-accent: #052E1F; }
+:root[data-theme="dark"] .app--mepaga { --accent: #5BC08A; --accent-soft: #1E3226; --on-accent: #0E1A13; }
+:root[data-theme="dark"] .app--meupix { --accent: #5FD1C4; --accent-soft: #17302D; --on-accent: #0B1A18; }
+:root[data-theme="dark"] .app--minhascompras { --accent: #F0A25E; --accent-soft: #3A2A1C; --on-accent: #1E130A; }
+:root[data-theme="dark"] .app--deckslingo { --accent: #9A94F7; --accent-soft: #25234A; --on-accent: #12112A; }
 
 /* Sobre */
 .sobre {

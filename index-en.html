@@ -6,6 +6,7 @@
 <title>HVCB App&amp;Games — Everyday apps</title>
 <meta name="description" content="HVCB App&amp;Games portfolio: Me Paga, Meu Pix, Minhas Compras and Deckslingo. Lightweight Android and web apps that get straight to the point and handle your data with care.">
 <meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("tema");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
 <meta name="theme-color" content="#F5F3EE" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101211" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://hugobastoss.github.io/hvcb-appgames/index-en.html">
@@ -27,6 +28,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap">
 <link rel="stylesheet" href="assets/styles.css">
+<script src="assets/theme.js" defer></script>
 </head>
 <body>
 <a class="pular-conteudo" href="#conteudo">Skip to Content</a>
@@ -38,11 +40,14 @@
         <img src="assets/logo-horizontal-grafite.webp" alt="HVCB App&amp;Games" width="1353" height="753" fetchpriority="high">
       </picture>
     </a>
-    <nav class="idiomas" aria-label="Language">
-      <a href="index.html" hreflang="pt-BR">PT</a>
-      <a class="ativo" href="index-en.html" hreflang="en" aria-current="page">EN</a>
-      <a href="index-es.html" hreflang="es">ES</a>
-    </nav>
+    <div class="topo-acoes">
+      <nav class="idiomas" aria-label="Language">
+        <a href="index.html" hreflang="pt-BR">PT</a>
+        <a class="ativo" href="index-en.html" hreflang="en" aria-current="page">EN</a>
+        <a href="index-es.html" hreflang="es">ES</a>
+      </nav>
+      <button type="button" class="tema-botao" id="temaBotao" aria-label="Theme: Auto. Tap to change.">Auto</button>
+    </div>
   </header>
 
   <main id="conteudo" tabindex="-1">
