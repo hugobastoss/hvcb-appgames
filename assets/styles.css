@@ -78,6 +78,14 @@ p { text-wrap: pretty; }
 }
 .marca { display: block; text-decoration: none; }
 .marca img { height: 3.5rem; width: auto; }
+/* Logo: grafite no tema claro, branco no escuro (sistema ou alternador manual) */
+.marca .logo--escuro { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .marca .logo--claro { display: none; }
+  :root:not([data-theme="light"]) .marca .logo--escuro { display: block; }
+}
+:root[data-theme="dark"] .marca .logo--claro { display: none; }
+:root[data-theme="dark"] .marca .logo--escuro { display: block; }
 .topo-acoes { display: flex; align-items: center; gap: 0.6rem; }
 .idiomas { display: flex; gap: 0.4rem; }
 .idiomas a {
