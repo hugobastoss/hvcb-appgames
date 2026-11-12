@@ -12,7 +12,7 @@ Site de portfólio dos apps e projetos da HVCB App&Games.
 | Meu Pix | Android | Na Google Play |
 | Minhas Compras | Android | Na Google Play |
 | Deckslingo | Web | No ar (deckslingo.com) |
-| PagueMe | Android | Em teste |
+| PagueMe | Android | Na Google Play |
 | Minha Escala | Android | Em teste |
 | QBuscado | Web | Em desenvolvimento |
 | Meu Sorteio | Android | Em desenvolvimento |
