@@ -301,3 +301,48 @@ h2 { font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.02em; li
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem;
   padding-block: 0 3rem; font-size: 0.85rem; color: var(--muted);
 }
+
+/* Detalhes do app: modal com capturas de tela (assets/detalhes.js) */
+.app[data-app] { cursor: pointer; }
+.detalhe {
+  margin: auto; border: 0; padding: 0; background: transparent; color: var(--ink);
+  width: min(60rem, calc(100vw - 2rem)); max-width: none; max-height: calc(100dvh - 2rem);
+}
+.detalhe::backdrop { background: rgb(0 0 0 / 0.6); }
+.detalhe-caixa {
+  position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: start;
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: clamp(1.25rem, 3vw, 2rem); max-height: calc(100dvh - 2rem); overflow: auto;
+}
+.detalhe-info { display: flex; flex-direction: column; gap: 1.1rem; padding-right: 2.5rem; }
+.detalhe-fechar {
+  position: absolute; top: 0.75rem; right: 0.75rem; z-index: 1;
+  width: 2.5rem; height: 2.5rem; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--card); color: var(--ink); font-size: 1.4rem; line-height: 1; cursor: pointer;
+}
+.detalhe-fechar:hover { border-color: var(--ink); }
+.detalhe-galeria { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; }
+.galeria-palco {
+  height: min(70dvh, 38rem); background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius); overflow: hidden;
+}
+.galeria-img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.galeria-controles { display: flex; align-items: center; justify-content: center; gap: 0.9rem; }
+.galeria-seta {
+  width: 2.6rem; height: 2.6rem; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--card); color: var(--ink); font-size: 1.4rem; line-height: 1; cursor: pointer;
+}
+.galeria-seta:hover { border-color: var(--ink); }
+.galeria-pontos { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.45rem; }
+.galeria-ponto {
+  width: 0.6rem; height: 0.6rem; border-radius: 999px; border: 0; padding: 0;
+  background: var(--line); cursor: pointer; transition: width 0.2s ease, background-color 0.2s ease;
+}
+.galeria-ponto[aria-current="true"] { width: 1.5rem; background: var(--accent); }
+@media (max-width: 46rem) {
+  .detalhe-caixa { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+  .galeria-palco { height: min(62dvh, 32rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .galeria-ponto { transition: none; }
+}

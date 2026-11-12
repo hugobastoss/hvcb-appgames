@@ -54,6 +54,7 @@
         <img src="assets/icons/mepaga.png" alt="" width="56" height="56">
         <img src="assets/icons/meupix.png" alt="" width="56" height="56">
         <img src="assets/icons/minhascompras.png" alt="" width="56" height="56">
+        <img src="assets/icons/pagueme.png" alt="" width="56" height="56">
         <img src="assets/icons/deckslingo.png" alt="" width="56" height="56">
       </div>
       <p class="eyebrow">Portfólio de apps</p>
@@ -68,7 +69,7 @@
       <div class="secao-titulo"><h2 id="titulo-apps">Apps</h2></div>
       <div class="apps">
 
-        <article class="app app--mepaga">
+        <article class="app app--mepaga" data-app="mepaga">
           <div class="app-topo">
             <img class="app-icone" src="assets/icons/mepaga.png" alt="" width="72" height="72" loading="lazy">
             <div class="app-nome">
@@ -84,6 +85,7 @@
           </ul>
           <div class="app-acoes">
             <a class="botao" href="https://play.google.com/store/apps/details?id=com.hvcb.appgames.mepaga" target="_blank" rel="noopener noreferrer">Baixar na Google Play</a>
+            <button type="button" class="botao botao--contorno detalhe-ver">Ver capturas</button>
             <span class="links-legais">
               <a class="link" href="https://hugobastoss.github.io/app-mepaga-docs/politica-de-privacidade.html" target="_blank" rel="noopener noreferrer">Privacidade</a>
               <a class="link" href="https://hugobastoss.github.io/app-mepaga-docs/termos-de-uso.html" target="_blank" rel="noopener noreferrer">Termos</a>
@@ -91,7 +93,7 @@
           </div>
         </article>
 
-        <article class="app app--meupix">
+        <article class="app app--meupix" data-app="meupix">
           <div class="app-topo">
             <img class="app-icone" src="assets/icons/meupix.png" alt="" width="72" height="72" loading="lazy">
             <div class="app-nome">
@@ -107,6 +109,7 @@
           </ul>
           <div class="app-acoes">
             <a class="botao" href="https://play.google.com/store/apps/details?id=com.hvcb.appgames.meupix" target="_blank" rel="noopener noreferrer">Baixar na Google Play</a>
+            <button type="button" class="botao botao--contorno detalhe-ver">Ver capturas</button>
             <span class="links-legais">
               <a class="link" href="https://hugobastoss.github.io/app-meupix-docs/politica-de-privacidade.html" target="_blank" rel="noopener noreferrer">Privacidade</a>
               <a class="link" href="https://hugobastoss.github.io/app-meupix-docs/termos-de-uso.html" target="_blank" rel="noopener noreferrer">Termos</a>
@@ -114,7 +117,7 @@
           </div>
         </article>
 
-        <article class="app app--minhascompras">
+        <article class="app app--minhascompras" data-app="minhascompras">
           <div class="app-topo">
             <img class="app-icone" src="assets/icons/minhascompras.png" alt="" width="72" height="72" loading="lazy">
             <div class="app-nome">
@@ -130,6 +133,7 @@
           </ul>
           <div class="app-acoes">
             <a class="botao" href="https://play.google.com/store/apps/details?id=com.hvcb.appgames.minhascompras" target="_blank" rel="noopener noreferrer">Baixar na Google Play</a>
+            <button type="button" class="botao botao--contorno detalhe-ver">Ver capturas</button>
             <span class="links-legais">
               <a class="link" href="https://hugobastoss.github.io/app-minhas-compras-docs/politica-de-privacidade.html" target="_blank" rel="noopener noreferrer">Privacidade</a>
               <a class="link" href="https://hugobastoss.github.io/app-minhas-compras-docs/termos-de-uso.html" target="_blank" rel="noopener noreferrer">Termos</a>
@@ -137,7 +141,7 @@
           </div>
         </article>
 
-        <article class="app app--pagueme">
+        <article class="app app--pagueme" data-app="pagueme">
           <div class="app-topo">
             <img class="app-icone" src="assets/icons/pagueme.png" alt="" width="72" height="72" loading="lazy">
             <div class="app-nome">
@@ -153,6 +157,7 @@
           </ul>
           <div class="app-acoes">
             <a class="botao" href="https://play.google.com/store/apps/details?id=com.hvcb.appgames.pague.me" target="_blank" rel="noopener noreferrer">Baixar na Google Play</a>
+            <button type="button" class="botao botao--contorno detalhe-ver">Ver capturas</button>
             <span class="links-legais">
               <a class="link" href="https://hugobastoss.github.io/app-pagueme-docs/politica-de-privacidade.html" target="_blank" rel="noopener noreferrer">Privacidade</a>
               <a class="link" href="https://hugobastoss.github.io/app-pagueme-docs/termos-de-uso.html" target="_blank" rel="noopener noreferrer">Termos</a>
@@ -430,5 +435,20 @@
     <a class="link" href="https://play.google.com/store/apps/developer?id=HVCB+App%26Games" target="_blank" rel="noopener noreferrer">Google Play</a>
   </footer>
 </div>
+<dialog class="detalhe" id="detalhe" aria-label="Detalhes do app">
+  <div class="detalhe-caixa">
+    <button type="button" class="detalhe-fechar" aria-label="Fechar">&times;</button>
+    <div class="detalhe-info"></div>
+    <div class="detalhe-galeria" role="region" aria-roledescription="carousel" aria-label="Capturas de tela">
+      <div class="galeria-palco"><img class="galeria-img" alt=""></div>
+      <div class="galeria-controles">
+        <button type="button" class="galeria-seta galeria-anterior" aria-label="Captura anterior">&#8249;</button>
+        <div class="galeria-pontos"></div>
+        <button type="button" class="galeria-seta galeria-proxima" aria-label="Próxima captura">&#8250;</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<script src="assets/detalhes.js" defer></script>
 </body>
 </html>
