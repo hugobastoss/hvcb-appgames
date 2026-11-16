@@ -34,6 +34,16 @@
     "assets/screenshorts/Play Store screenshots - Pagueme/04-titulos.png",
     "assets/screenshorts/Play Store screenshots - Pagueme/05-investimentos.png",
     "assets/screenshorts/Play Store screenshots - Pagueme/06-dados.png"
+  ],
+  "meusorteio": [
+    "assets/screenshorts/Screenshots Play Store - Meu Sorteio/01-inicio@2x.png",
+    "assets/screenshorts/Screenshots Play Store - Meu Sorteio/02-nomes@2x.png",
+    "assets/screenshorts/Screenshots Play Store - Meu Sorteio/03-roleta@2x.png",
+    "assets/screenshorts/Screenshots Play Store - Meu Sorteio/04-amigo-secreto@2x.png",
+    "assets/screenshorts/Screenshots Play Store - Meu Sorteio/05-bingo@2x.png",
+    "assets/screenshorts/Screenshots Play Store - Meu Sorteio/06-dados@2x.png",
+    "assets/screenshorts/Screenshots Play Store - Meu Sorteio/07-historico@2x.png",
+    "assets/screenshorts/Screenshots Play Store - Meu Sorteio/08-toque@2x.png"
   ]
 };
 
