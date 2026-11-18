@@ -28,7 +28,7 @@
   }
 
   function atualizarThemeColor() {
-    var cor = temaResolvido() === "dark" ? "#101211" : "#F5F3EE";
+    var cor = temaResolvido() === "dark" ? "#0F1016" : "#FFFFFF";
     var metas = document.querySelectorAll('meta[name="theme-color"]');
     for (var i = 0; i < metas.length; i++) metas[i].setAttribute("content", cor);
   }

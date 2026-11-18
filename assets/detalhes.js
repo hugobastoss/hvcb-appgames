@@ -150,14 +150,10 @@
   function proximaCaptura() { mostrar(indice + 1); iniciarAuto(); }
   function capturaAnterior() { mostrar(indice - 1); iniciarAuto(); }
 
-  // Cliques nos cards: o botão "Ver capturas" ou o próprio card abre o modal.
-  // Links e botões dentro do card (ex.: Baixar, Privacidade) continuam funcionando normalmente.
+  // Só o botão "Ver capturas" abre o modal; clicar no restante do card não faz nada.
   document.addEventListener("click", function (e) {
     var ver = e.target.closest(".app[data-app] .detalhe-ver");
-    if (ver) { abrir(ver.closest(".app[data-app]")); return; }
-    if (e.target.closest("a, button")) return;
-    var card = e.target.closest(".app[data-app]");
-    if (card) abrir(card);
+    if (ver) abrir(ver.closest(".app[data-app]"));
   });
 
   fechar.addEventListener("click", function () { dlg.close(); });
