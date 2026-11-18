@@ -1,6 +1,6 @@
-# HVCB App&Games
+# HVCB App & Games
 
-Site de portfólio dos apps e projetos da HVCB App&Games.
+Site de portfólio dos apps e projetos da HVCB App & Games.
 
 🌐 https://hugobastoss.github.io/hvcb-appgames/
 
