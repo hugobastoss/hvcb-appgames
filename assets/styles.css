@@ -368,6 +368,7 @@ h2 {
 .app--meusorteio    { --accent: #A21CAF; --accent-soft: #F6DFF5; --on-accent: #FFFFFF; }
 .app--cansei        { --accent: #BA3207; --accent-soft: #FCE3D8; --on-accent: #FFFFFF; }
 .app--diafort       { --accent: #2A2926; --accent-soft: #ECEAE5; --on-accent: #FFFFFF; }
+.app--meupet        { --accent: #7B2B45; --accent-soft: #F4EBDC; --on-accent: #FFFFFF; }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .app--pagueme { --accent: #F5C542; --accent-soft: #33290F; --on-accent: #1F1805; }
@@ -378,6 +379,7 @@ h2 {
   :root:not([data-theme="light"]) .app--meusorteio { --accent: #E879F9; --accent-soft: #3A1638; --on-accent: #230D21; }
   :root:not([data-theme="light"]) .app--cansei { --accent: #FF8A5C; --accent-soft: #3D1F14; --on-accent: #240E05; }
   :root:not([data-theme="light"]) .app--diafort { --accent: #ECEAE5; --accent-soft: #2A2926; --on-accent: #141414; }
+  :root:not([data-theme="light"]) .app--meupet { --accent: #E07A9A; --accent-soft: #3A1E29; --on-accent: #1F0A12; }
   :root:not([data-theme="light"]) .app--devstackshub { --accent: #22D3EE; --accent-soft: #10303A; --on-accent: #06222A; }
   :root:not([data-theme="light"]) .app--devskillshub { --accent: #34D399; --accent-soft: #0F2E24; --on-accent: #052E1F; }
   :root:not([data-theme="light"]) .app--mepaga { --accent: #5BC08A; --accent-soft: #1E3226; --on-accent: #0E1A13; }
@@ -394,6 +396,7 @@ h2 {
 :root[data-theme="dark"] .app--meusorteio { --accent: #E879F9; --accent-soft: #3A1638; --on-accent: #230D21; }
 :root[data-theme="dark"] .app--cansei { --accent: #FF8A5C; --accent-soft: #3D1F14; --on-accent: #240E05; }
 :root[data-theme="dark"] .app--diafort { --accent: #ECEAE5; --accent-soft: #2A2926; --on-accent: #141414; }
+:root[data-theme="dark"] .app--meupet { --accent: #E07A9A; --accent-soft: #3A1E29; --on-accent: #1F0A12; }
 :root[data-theme="dark"] .app--devstackshub { --accent: #22D3EE; --accent-soft: #10303A; --on-accent: #06222A; }
 :root[data-theme="dark"] .app--devskillshub { --accent: #34D399; --accent-soft: #0F2E24; --on-accent: #052E1F; }
 :root[data-theme="dark"] .app--mepaga { --accent: #5BC08A; --accent-soft: #1E3226; --on-accent: #0E1A13; }
